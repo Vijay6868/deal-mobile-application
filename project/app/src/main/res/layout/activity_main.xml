@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:id="@+id/bookMeLogo"
+        android:layout_marginTop="100sp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/book_me_logo"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_below="@id/bookMeLogo"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50sp"
+        android:layout_marginEnd="50sp"
+        android:layout_marginBottom="50sp"
+        android:hint="Username"
+        android:theme="@style/ShapeAppearance.Material3.Corner.Full" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:hint="Password"
+        android:theme="@style/ShapeAppearance.Material3.Corner.Full"
+        android:layout_below="@id/etUsername"
+        android:id="@+id/etPassword"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="-30sp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_below="@id/etPassword"
+        android:text="Login"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20sp"
+        android:id="@+id/btLogin"/>
+</RelativeLayout>
