@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="secButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:backgroundTint">#FFFFFFFF</item>
+        <item name="textFillColor">@color/sec_color</item>
+        <item name="strokeColor">@color/sec_color</item>
+    </style>
+</resources>

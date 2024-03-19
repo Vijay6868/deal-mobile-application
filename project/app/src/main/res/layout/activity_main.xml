@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="@color/white"
     >
 
     <ImageView
@@ -15,34 +16,29 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/book_me_logo"/>
 
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="match_parent"
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="300sp"
         android:layout_height="50sp"
         android:layout_below="@id/bookMeLogo"
-        android:layout_marginStart="50sp"
-        android:layout_marginTop="50sp"
-        android:layout_marginEnd="50sp"
-        android:layout_marginBottom="50sp"
-        android:hint="Username"
-        android:theme="@style/ShapeAppearance.Material3.Corner.Full" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:hint="Password"
-        android:theme="@style/ShapeAppearance.Material3.Corner.Full"
-        android:layout_below="@id/etUsername"
-        android:id="@+id/etPassword"
-        android:layout_marginLeft="50sp"
-        android:layout_marginRight="50sp"
-        android:layout_marginTop="-30sp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60sp"
+        android:text="Login"
+        android:textSize="18sp"
+        android:backgroundTint="@color/sec_color"
         />
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btRegister"
+        android:layout_width="300sp"
         android:layout_height="50sp"
-        android:layout_below="@id/etPassword"
-        android:text="Login"
+        android:layout_below="@id/btLogin"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20sp"
-        android:id="@+id/btLogin"/>
+        android:layout_marginTop="10sp"
+        android:text="Register"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/sec_color"
+        stro
+        />
 </RelativeLayout>
