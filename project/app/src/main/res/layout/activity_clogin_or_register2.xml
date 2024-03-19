@@ -15,14 +15,27 @@
         android:layout_centerHorizontal="true"
         android:src="@drawable/book_me_logo"/>
 
+    <TextView
+        android:id="@+id/lbRegisterAs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookMeLogo"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:text="Register as"
+        style="@style/label_color" />
+
     <Button
         android:id="@+id/btLogin"
         android:layout_width="300sp"
         android:layout_height="50sp"
-        android:layout_below="@id/bookMeLogo"
+        android:layout_below="@id/lbRegisterAs"
         android:layout_centerInParent="true"
-        android:layout_marginTop="60sp"
-        android:text="Login"
+        android:layout_marginTop="40sp"
+        android:text="Vendor"
         android:textSize="18sp"
         android:background="@drawable/bt_sec_color" />
     <Button
@@ -32,7 +45,7 @@
         android:layout_below="@id/btLogin"
         android:layout_centerInParent="true"
         android:layout_marginTop="20sp"
-        android:text="Register"
+        android:text="Customer"
         android:textSize="18sp"
         android:background="@drawable/button_outline"
         android:textColor="@color/sec_color"/>
