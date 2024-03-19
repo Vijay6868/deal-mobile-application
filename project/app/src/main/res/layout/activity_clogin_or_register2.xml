@@ -7,13 +7,14 @@
     tools:context=".MainActivity"
     android:background="@color/white"
     >
+
     <ImageView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
         android:id="@+id/bookMeLogo"
-        android:layout_marginTop="100sp"
+        android:layout_width="241dp"
+        android:layout_height="232dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/book_me_logo"/>
+        android:layout_marginTop="80sp"
+        android:src="@drawable/book_me_logo" />
 
     <TextView
         android:id="@+id/lbRegisterAs"
@@ -35,9 +36,9 @@
         android:layout_below="@id/lbRegisterAs"
         android:layout_centerInParent="true"
         android:layout_marginTop="40sp"
+        android:background="@drawable/bt_sec_color"
         android:text="Vendor"
-        android:textSize="18sp"
-        android:background="@drawable/bt_sec_color" />
+        android:textSize="18sp" />
     <Button
         android:id="@+id/btRegister"
         android:layout_width="300sp"
