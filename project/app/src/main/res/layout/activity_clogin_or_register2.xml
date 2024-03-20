@@ -28,7 +28,6 @@
         android:layout_marginBottom="20sp"
         android:text="Register as"
         style="@style/label_color" />
-
     <Button
         android:id="@+id/btLogin"
         android:layout_width="300sp"
