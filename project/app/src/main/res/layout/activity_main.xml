@@ -16,26 +16,52 @@
         android:layout_marginTop="80sp"
         android:src="@drawable/book_me_logo" />
 
-    <Button
-        android:id="@+id/btLogin"
-        android:layout_width="300sp"
-        android:layout_height="50sp"
+    <TextView
+        android:id="@+id/lbRegisterAs"
+        style="@style/label_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/bookMeLogo"
         android:layout_centerInParent="true"
-        android:layout_marginTop="60sp"
-        android:background="@drawable/bt_sec_color"
-        android:text="Login"
-        android:textSize="18sp" />
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
+        android:text="Login as" />
     <Button
-        android:id="@+id/btRegister"
+        android:id="@+id/btCustomer"
         android:layout_width="300sp"
         android:layout_height="50sp"
-        android:layout_below="@id/btLogin"
+        android:layout_below="@id/lbRegisterAs"
         android:layout_centerInParent="true"
         android:layout_marginTop="20sp"
-        android:text="Register"
+        android:text="Customer"
         android:textSize="18sp"
         android:background="@drawable/button_outline"
         android:textColor="@color/sec_color"/>
+
+    <Button
+        android:id="@+id/btSupplier"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/btCustomer"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bt_sec_color"
+        android:text="Supplier"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/btAdmin"
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/btSupplier"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dark_blue_button"
+        android:text="Admin"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
 </RelativeLayout>

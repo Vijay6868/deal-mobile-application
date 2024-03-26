@@ -7,13 +7,44 @@
     tools:context=".C_Registration"
     android:background="@color/white">
 
+
+    <ImageButton
+        android:id="@+id/ac_back"
+        style="@style/backButton"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello ! Register to get started"
         style="@style/label_heading"
         android:id="@+id/lbHeading_login"
-        android:padding="40sp" />
+        android:padding="40sp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/tbfirstname_login_r"
+        style="@style/et_Text"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/lbHeading_login"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/edit_text_background"
+        android:hint="Frist Name"
+        android:textColorHint="@color/et_hint" />
+
+    <EditText
+        android:id="@+id/tblastname_login_r"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Last Name"
+        android:textColorHint="@color/et_hint"
+        style="@style/et_Text"
+        android:background="@drawable/edit_text_background"
+        android:layout_below="@+id/tbfirstname_login_r"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"/>
+
     <EditText
         android:id="@+id/tbUsername_login_r"
         android:layout_width="350dp"
@@ -22,7 +53,7 @@
         android:textColorHint="@color/et_hint"
         style="@style/et_Text"
         android:background="@drawable/edit_text_background"
-        android:layout_below="@+id/lbHeading_login"
+        android:layout_below="@+id/tblastname_login_r"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"/>
 
@@ -73,7 +104,7 @@
         android:layout_height="50sp"
         android:layout_below="@id/tbEmail_r"
         android:layout_centerInParent="true"
-        android:layout_marginTop="60sp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/bt_sec_color"
         android:text="Register"
         android:textSize="18sp" />
