@@ -6,14 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/white">
-
+    <ImageButton
+        android:id="@+id/al_back"
+        style="@style/backButton"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome back! Glad to see you, Again!"
         style="@style/label_heading"
         android:id="@+id/lbHeading_login"
-        android:padding="40sp"
+        android:padding="40dp"
+        android:layout_marginTop="50dp"
         />
     <EditText
         android:id="@+id/tbUsername_login"
