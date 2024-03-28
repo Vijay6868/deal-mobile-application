@@ -6,6 +6,7 @@ public class Deal {
     private boolean discount;
     private int imgResource;
     private int discountRate;
+    private int rating;
     public Deal(String title, String description, String category, String tag, double originalPrice, int imgResource) {
         this.title = title;
         this.description = description;
