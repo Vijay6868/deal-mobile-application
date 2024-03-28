@@ -19,17 +19,18 @@
         android:padding="40dp"
         android:layout_marginTop="50dp"
         />
+
     <EditText
         android:id="@+id/tbUsername_login"
+        style="@style/et_Text"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:hint="Username"
-        android:textColorHint="@color/et_hint"
-        style="@style/et_Text"
-        android:background="@drawable/edit_text_background"
         android:layout_below="@+id/lbHeading_login"
         android:layout_centerInParent="true"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="60dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Username"
+        android:textColorHint="@color/et_hint" />
 
     <EditText
         android:id="@+id/tbPassword_login"
