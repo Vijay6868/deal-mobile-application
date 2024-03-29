@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RVHolder extends RecyclerView.ViewHolder {
     TextView tvTitle,tvPrice, tvOffer;
     RatingBar ratingBar;
-    ImageView img;
+    ImageView imag;
 
     public RVHolder(@NonNull View itemView) {
         super(itemView);
@@ -21,6 +21,7 @@ public class RVHolder extends RecyclerView.ViewHolder {
         tvPrice = itemView.findViewById(R.id.price);
         ratingBar = itemView.findViewById(R.id.stars);
         tvOffer = itemView.findViewById(R.id.card_offer);
+        imag = itemView.findViewById(R.id.card_img);
 
     }
 }

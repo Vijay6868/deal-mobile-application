@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="350dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
+    android:background="@drawable/button_outline"
     app:cardCornerRadius="40dp"
-    android:elevation="10dp"
+    android:elevation="20dp"
     android:layout_margin="25dp"
-    android:id="@+id/dealsCard">
+    android:id="@+id/rv_carditems">
 
     <RelativeLayout
         android:layout_width="match_parent"

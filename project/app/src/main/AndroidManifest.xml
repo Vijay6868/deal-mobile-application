@@ -13,7 +13,7 @@
         android:theme="@style/Theme.DealsApp"
         tools:targetApi="31">
         <activity
-            android:name=".C_homeScreen"
+            android:name=".C_Registration"
             android:exported="false" />
         <activity
             android:name=".Login"
@@ -25,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".C_Registration"
+            android:name=".C_homeScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
