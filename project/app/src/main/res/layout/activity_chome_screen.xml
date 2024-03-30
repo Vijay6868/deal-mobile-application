@@ -17,14 +17,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@color/sec_color">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/sec_color">
+            android:background="@color/sec_color"
+            app:menu="@menu/bottom_nav_menu">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
