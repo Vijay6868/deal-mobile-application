@@ -34,5 +34,12 @@
     <style name="CardImage" parent="Widget.AppCompat.ImageButton">
         <item name="android:scaleType">centerInside</item>
     </style>
+    <style name="btdealAndCat">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
 </resources>

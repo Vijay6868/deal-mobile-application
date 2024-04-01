@@ -5,18 +5,18 @@
         android:id="@+id/nav_deals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title=""
+        android:title="Deals"
         android:icon="@drawable/nav_deals_lite"/>
     <item
         android:id="@+id/nav_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title=""
+        android:title="Home"
         android:icon="@drawable/nav_home_light"/>
     <item
         android:id="@+id/nav_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:title=""
+        android:title="Profile"
         android:icon="@drawable/nav_profile_lite"/>
 </menu>
