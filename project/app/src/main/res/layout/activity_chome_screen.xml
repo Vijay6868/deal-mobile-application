@@ -5,18 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button_outline"
+        android:gravity="right"
+        android:backgroundTint="@color/sec_color"
+        android:elevation="5dp"
+
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/tab_layout">
+        android:id="@+id/tab_layout"
+        android:layout_below="@id/search_view">
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabTextColor="@color/black"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
+
+
             app:tabIndicatorColor="@color/sec_color"
             app:tabIndicatorHeight="4dp">
 
@@ -60,6 +75,7 @@
 
 
     </LinearLayout>
+
 
 
 
