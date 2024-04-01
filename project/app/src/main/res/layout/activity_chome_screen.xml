@@ -16,7 +16,7 @@
         android:queryHint="Search"
         android:iconifiedByDefault="false"
         android:backgroundTint="@color/sec_color"
-        android:elevation="5dp"
+        android:elevation="3dp"
 
         />
 
