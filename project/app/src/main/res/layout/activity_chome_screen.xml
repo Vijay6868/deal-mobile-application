@@ -13,7 +13,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/button_outline"
-        android:gravity="right"
+        android:queryHint="Search"
+        android:iconifiedByDefault="false"
         android:backgroundTint="@color/sec_color"
         android:elevation="5dp"
 
