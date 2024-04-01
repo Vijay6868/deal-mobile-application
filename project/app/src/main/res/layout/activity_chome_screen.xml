@@ -6,27 +6,43 @@
     android:layout_height="match_parent"
     android:background="@color/white">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_centerHorizontal="true">
-        <Button
-            style="@style/btdealAndCat"
-            android:text="Featured Deals"
-            android:layout_marginRight="40dp"
-            />
-        <Button
-            style="@style/btdealAndCat"
-            android:text="Categories"/>
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tab_layout">
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/black"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            app:tabIndicatorColor="@color/sec_color"
+            app:tabIndicatorHeight="4dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Featured Deals" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categories" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeScreen"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_marginTop="240dp"
+
         android:background="@color/white"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".C_homeScreen" />
+        tools:context=".C_homeScreen"
+        android:layout_below="@id/tab_layout"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,5 +60,7 @@
 
 
     </LinearLayout>
+
+
 
 </RelativeLayout>
