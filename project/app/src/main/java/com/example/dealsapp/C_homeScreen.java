@@ -48,9 +48,11 @@ public class C_homeScreen extends AppCompatActivity {
                 switch (tab.getPosition()){
                     case 0:
                         fragment = new F_Featured_Deals();
+                        break;
 
                     case 1:
                         fragment = new Category_frag();
+                        break;
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment)
