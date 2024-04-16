@@ -110,19 +110,55 @@
                 android:layout_toRightOf="@id/ic_address"
                 android:layout_below="@id/ic_bookings"
                 android:layout_marginTop="13dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_contact_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lb_address">
+
+                <ImageView
+                    android:id="@+id/ic_contact_person"
+                    style="@style/user_details_icon"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_contact_person" />
+
+                <TextView
+                    android:id="@+id/lb_contact_person"
+                    style="@style/user_details"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@id/ic_contact_person"
+                    android:text="John" />
+
+                <ImageView
+                    android:id="@+id/ic_phone"
+                    style="@style/user_details_icon"
+                    android:layout_below="@id/ic_contact_person"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_phone" />
+
+                <TextView
+                    android:id="@+id/lb_c_phone"
+                    style="@style/user_details"
+                    android:layout_below="@id/lb_contact_person"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/ic_phone"
+                    android:text="John" />
+            </RelativeLayout>
+
             <ImageView
-                android:id="@+id/ic_address"
+                android:layout_marginTop="300dp"
+                android:id="@+id/ic_logout"
                 style="@style/user_details_icon"
-                android:src="@drawable/ic_address"
+                android:src="@drawable/ic_log_out"
                 android:layout_below="@id/ic_bookings"/>
             <TextView
-                android:id="@+id/lb_address"
+                android:id="@+id/lb_logOut"
                 style="@style/user_details"
-                android:text="Address"
-                android:layout_toRightOf="@id/ic_address"
+                android:text="Log out"
+                android:layout_toRightOf="@id/ic_logout"
                 android:layout_below="@id/ic_bookings"
-                android:layout_marginTop="13dp"/>
-
+                android:layout_marginTop="300dp"/>
 
         </RelativeLayout>
     </RelativeLayout>

@@ -56,7 +56,7 @@ public class C_homeScreen extends AppCompatActivity {
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .commit();
             }
 
