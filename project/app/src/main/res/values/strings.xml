@@ -134,4 +134,20 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="deal_description">
+        "Pure Milford and their jovial crew welcome you aboard a modern and spacious catamaran for an atmospheric cruise in magical Milford Sound!"
+    </string>
+    <string name="h1">
+        "Learn plenty of Fiord land facts from our famously friendly skipper and crew."
+    </string>
+    <string name="h2">
+        "Free tea and coffee throughout the cruise with an onboard Cafe Bar serving hot and cold food and beverages"
+    </string>
+    <string name="h3">
+        "Enjoy a 1hr 45min – 2 hour cruise through ancient rainforest, towering cliffs and waterfalls."
+    </string>
+    <string name="description">
+        "Marvel at the magic of Milford from every angle through large windows, spacious viewing decks, and from TV screens projecting live outdoor footage from HD cameras.
+            Visit the sun deck for thos3 -degree ast views,"
+    </string>
 </resources>

@@ -70,8 +70,9 @@
     </style>
     <style name="highlights_sec_text">
         <item name="android:textStyle"></item>
-        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:paddingBottom">7dp</item>
     </style>
 
 
