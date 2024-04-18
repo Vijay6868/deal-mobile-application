@@ -7,12 +7,14 @@ import android.widget.TextView;
 import android.widget.RatingBar;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RVHolder extends RecyclerView.ViewHolder {
     TextView tvTitle,tvPrice, tvOffer;
     RatingBar ratingBar;
     ImageView imag;
+    CardView cardView;
 
     public RVHolder(@NonNull View itemView) {
         super(itemView);
@@ -22,6 +24,7 @@ public class RVHolder extends RecyclerView.ViewHolder {
         ratingBar = itemView.findViewById(R.id.stars);
         tvOffer = itemView.findViewById(R.id.card_offer);
         imag = itemView.findViewById(R.id.card_img);
+        cardView = itemView.findViewById(R.id.rv_carditems);
 
     }
 }

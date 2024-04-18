@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public class F_Featured_Deals extends Fragment {
+public class F_Featured_Deals extends Fragment implements SelectListener {
 
     RecyclerView recyclerView;
     @Override
@@ -30,9 +30,24 @@ public class F_Featured_Deals extends Fragment {
 
         deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
         recyclerView = view.findViewById(R.id.f_rv_item);
-        RVAdapter adapter = new RVAdapter(deals);
+        RVAdapter adapter = new RVAdapter(deals,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
         return view;
+    }
+
+    @Override
+    public void onItemClicked(Deal myDeal) {
+        F_Deal_details dealDetailsFragment = new F_Deal_details();
+
+        // Pass any necessary data to the deal details fragment using arguments
+
+
+        // Replace the current fragment with the deal details fragment
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main_frame, dealDetailsFragment)
+                .addToBackStack(null)
+                .commit();
+
     }
 }
