@@ -1,5 +1,6 @@
 package com.example.dealsapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -7,68 +8,47 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
 public class C_homeScreen extends AppCompatActivity {
-    RecyclerView recyclerView;
-    TabLayout tabLayout;
+
     FrameLayout frameLayout;
+    BottomNavigationView navBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chome_screen);
-//        ArrayList<Deal> deals = new ArrayList<>(); // to store Deal class object
-//
-//        ArrayList<Integer> list1 = new ArrayList<Integer>(); // to store image res id for s listing
-//        list1.add(R.drawable.img1);
-//        list1.add(R.drawable.img2);
-//        list1.add(R.drawable.img3);
-//
-//        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
-//        recyclerView = findViewById(R.id.homeScreen);
-//        RVAdapter adapter = new RVAdapter(deals);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerView.setAdapter(adapter);
+        frameLayout = findViewById(R.id.main_frame);
+        navBar = findViewById(R.id.nav_bar);
 
-        tabLayout = findViewById(R.id.home_tab);
-        frameLayout = findViewById(R.id.frame_layout);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,new F_Featured_Deals())
-                .addToBackStack(null)
-                .commit();
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new F_Home()).commit();
+        navBar.setSelectedItemId(R.id.home);
+        navBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                Fragment fragment = null;
-                switch (tab.getPosition()){
-                    case 0:
-                        fragment = new F_Featured_Deals();
-                        break;
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                    case 1:
-                        fragment = new Category_frag();
-                        break;
+                int itemId = item.getItemId();
 
+                if(itemId == R.id.home){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new F_Home()).commit();
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout,fragment)
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                        .commit();
-            }
+                else if(itemId == R.id.profile){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new User_details()).commit();
+                }
+                else if (itemId == R.id.deals) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new F_Availble_Deals()).commit();
+                }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
+                return true;
             }
         });
+
     }
 }
