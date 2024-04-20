@@ -1,9 +1,10 @@
 package com.example.dealsapp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Deal {
+public class Deal implements Serializable {
     private String title, description, category, tag;
     private float originalPrice, discountedPrice;
     private boolean discount;

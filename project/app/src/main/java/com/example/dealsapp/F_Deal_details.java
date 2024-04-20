@@ -8,6 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.constants.ScaleTypes;
+import com.denzcoskun.imageslider.models.SlideModel;
+
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link F_Deal_details#newInstance} factory method to
@@ -49,16 +55,40 @@ public class F_Deal_details extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_f__deal_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_f__deal_details, container, false);
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            Deal deal = (Deal) bundle.getSerializable("deal");
+            // Use the deal object to populate the UI or perform any necessary operations
+            if (deal != null) {
+                // Get the list of image resource IDs from the Deal object
+                ArrayList<Integer> imgResource = deal.getImgResource();
+
+                // Initialize your image list for the ImageSlider
+                ArrayList<SlideModel> imageList = new ArrayList<>();
+                for (Integer resourceId : imgResource) {
+                    // Add each image resource ID to the image list
+                    imageList.add(new SlideModel(resourceId, ScaleTypes.CENTER_CROP));
+                }
+
+                // Find the ImageSlider view by ID from the inflated layout
+                ImageSlider imageSlider = view.findViewById(R.id.image_slider);
+
+                // Set the image list to the ImageSlider
+                imageSlider.setImageList(imageList);
+            }
+        }
+
+        return view;
     }
+
 }

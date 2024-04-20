@@ -29,6 +29,8 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         list1.add(R.drawable.img3);
 
         deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
         recyclerView = view.findViewById(R.id.f_rv_item);
         RVAdapter adapter = new RVAdapter(deals,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -41,7 +43,9 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         F_Deal_details dealDetailsFragment = new F_Deal_details();
 
         // Pass any necessary data to the deal details fragment using arguments
-
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("deal", myDeal);
+        dealDetailsFragment.setArguments(bundle);
 
         // Replace the current fragment with the deal details fragment
         getActivity().getSupportFragmentManager().beginTransaction()
