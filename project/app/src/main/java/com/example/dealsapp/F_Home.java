@@ -30,7 +30,7 @@ public class F_Home extends Fragment {
                 .addToBackStack(null)
                 .commit();
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-
+            // tab screen changes between featured deals and categories
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 Fragment fragment = null;
