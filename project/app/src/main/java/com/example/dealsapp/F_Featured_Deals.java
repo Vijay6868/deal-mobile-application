@@ -23,14 +23,7 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         View view = inflater.inflate(R.layout.fragment_f__featured__deals, container, false);
 
         ArrayList<Deal> deals = new ArrayList<>();
-        ArrayList<Integer> list1 = new ArrayList<>(); // to store image res id for s listing
-        list1.add(R.drawable.img1);
-        list1.add(R.drawable.img2);
-        list1.add(R.drawable.img3);
-
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,5));
+        deals = getDeals();
         recyclerView = view.findViewById(R.id.f_rv_item);
         RVAdapter adapter = new RVAdapter(deals,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -53,5 +46,46 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
                 .addToBackStack(null)
                 .commit();
 
+    }
+    public ArrayList<Deal> getDeals(){
+        ArrayList<Deal> deals = new ArrayList<>();
+
+        ArrayList<Integer> list = new ArrayList<>(); // to store image res id for s listing
+
+        list.add(R.drawable.img1);
+        list.add(R.drawable.img2);
+        list.add(R.drawable.img3);
+
+        ArrayList<Integer> list1 = new ArrayList<>(); // to store image res id for s listing
+
+        list1.add(R.drawable.img11);
+        list1.add(R.drawable.img12);
+        list1.add(R.drawable.img13);
+
+        ArrayList<Integer> list3 = new ArrayList<>(); // to store image res id for s listing
+
+        list3.add(R.drawable.img31);
+        list3.add(R.drawable.img32);
+        list3.add(R.drawable.img33);
+
+        ArrayList<Integer> list4 = new ArrayList<>(); // to store image res id for s listing
+
+        list4.add(R.drawable.img41);
+        list4.add(R.drawable.img42);
+        list4.add(R.drawable.img43);
+
+        ArrayList<Integer> list5 = new ArrayList<>(); // to store image res id for s listing
+
+        list5.add(R.drawable.img51);
+        list5.add(R.drawable.img52);
+        list5.add(R.drawable.img53);
+
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list,5));
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,4));
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list3,5));
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list4,4));
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list5,5));
+
+        return deals;
     }
 }
