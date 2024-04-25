@@ -84,8 +84,23 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         deals.add(new Deal("Pure Milford Sound Cruise",99,list1,4));
         deals.add(new Deal("Pure Milford Sound Cruise",99,list3,5));
         deals.add(new Deal("Pure Milford Sound Cruise",99,list4,4));
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list5,5));
+        deals.add(new Deal("Jet Boat Ride",99,list5,5));
 
         return deals;
     }
+    void performSearch(String query) {
+        // Filter the list of deals based on the entered query
+        ArrayList<Deal> filteredDeals = new ArrayList<>();
+        for (Deal deal : getDeals()) {
+            // Check if the deal's title contains the query (you can adjust the search criteria as needed)
+            if (deal.getTitle().toLowerCase().contains(query.toLowerCase())) {
+                filteredDeals.add(deal);
+            }
+        }
+
+        // Update the RecyclerView adapter with the filtered list of deals
+        RVAdapter adapter = new RVAdapter(filteredDeals, this);
+        recyclerView.setAdapter(adapter);
+    }
+
 }
