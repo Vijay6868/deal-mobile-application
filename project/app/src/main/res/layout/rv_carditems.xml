@@ -35,7 +35,7 @@
         <TextView
             android:id="@+id/listingTitle"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="Pure Milford Sound Cruise"
             android:layout_below="@+id/innerCard"
             android:textColor="@color/dark_blue_text"
@@ -76,6 +76,7 @@
             android:scaleY="0.6"
             android:numStars="5"
             android:progressTint="@color/star"
+
             />
         <TextView
             android:id="@+id/card_offer"

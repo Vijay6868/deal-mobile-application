@@ -16,6 +16,7 @@ public class RVHolder extends RecyclerView.ViewHolder {
     ImageView imag;
     CardView cardView;
 
+
     public RVHolder(@NonNull View itemView) {
         super(itemView);
 

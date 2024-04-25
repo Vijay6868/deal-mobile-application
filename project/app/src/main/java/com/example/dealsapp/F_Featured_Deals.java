@@ -22,7 +22,7 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
 
         View view = inflater.inflate(R.layout.fragment_f__featured__deals, container, false);
 
-        ArrayList<Deal> deals = new ArrayList<>();
+        ArrayList<Deal> deals;
         deals = getDeals();
         recyclerView = view.findViewById(R.id.f_rv_item);
         RVAdapter adapter = new RVAdapter(deals,this);
@@ -80,11 +80,11 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         list5.add(R.drawable.img52);
         list5.add(R.drawable.img53);
 
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list,5));
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list1,4));
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list3,5));
-        deals.add(new Deal("Pure Milford Sound Cruise",99,list4,4));
-        deals.add(new Deal("Jet Boat Ride",99,list5,5));
+        deals.add(new Deal("Pure Milford Sound Cruise",99,list,5,R.string.c_to_do_things,R.string.deal_description));
+        deals.add(new Deal("Whale Watch and scenic view",99,list1,4,R.string.c_to_do_things,R.string.deal_description));
+        deals.add(new Deal("Joe's Garage Five Mile",99,list3,5,R.string.c_restaurant,R.string.deal_description));
+        deals.add(new Deal("Winnies Pizza - Dinner",99,list4,4,R.string.c_restaurant,R.string.deal_description));
+        deals.add(new Deal("Jet Boat Ride",99,list5,5,R.string.c_to_do_things,R.string.deal_description));
 
         return deals;
     }

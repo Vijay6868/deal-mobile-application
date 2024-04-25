@@ -5,39 +5,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Deal implements Serializable {
-    private String title, description, category, tag;
+    private String title, tag;
     private float originalPrice, discountedPrice;
     private boolean discount;
     private ArrayList<Integer> imgResource;
-    private int discountRate;
+    private int discountRate,category,description;
     private float rating;
 
-    public Deal(String title, float originalPrice, ArrayList<Integer> imgResource, int rating) {
+    public Deal(String title, float originalPrice, ArrayList<Integer> imgResource, int rating, int category, int description) {
         this.title = title;
         this.originalPrice = originalPrice;
         this.imgResource = imgResource;
         this.rating = rating;
+        this.category = category;
+        this.description = description;
     }
 
-    public Deal(String title, String description, String category, String tag, float originalPrice,
-                ArrayList <Integer> imgResource) {
-        this.title = title;
-        this.description = description;
-        this.category = category;
-        this.tag = tag;
-        this.originalPrice = originalPrice;
-        this.imgResource = imgResource;
-    }
+
 
     public String getTitle() {
         return title;
     }
 
-    public String getDescription() {
+    public int getDescription() {
         return description;
     }
 
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 

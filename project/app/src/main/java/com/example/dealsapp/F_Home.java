@@ -15,7 +15,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
-public class F_Home extends Fragment {
+public class F_Home extends Fragment implements Category_frag.CategoryFilterListener{
 
     SearchView searchView;
     TabLayout tabLayout;
@@ -39,6 +39,7 @@ public class F_Home extends Fragment {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // Perform search operation with the entered query
+
                 featuredDealsFragment.performSearch(query);
                 return true;
             }
@@ -85,5 +86,10 @@ public class F_Home extends Fragment {
         getChildFragmentManager().beginTransaction()
                 .replace(R.id.frame_layout, fragment)
                 .commit();
+    }
+
+    @Override
+    public void onFilterButtonClicked(String filterType) {
+
     }
 }

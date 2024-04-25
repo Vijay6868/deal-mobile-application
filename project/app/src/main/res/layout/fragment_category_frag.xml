@@ -15,11 +15,13 @@
         <Button
             style="@style/darkBlueButton"
             android:text="things to do"
+            android:id="@+id/btThingsToDo"
             />
         <Button
             style="@style/darkBlueButton"
             android:layout_marginTop="200dp"
             android:text="Restaurants"
+            android:id="@+id/btRestaurants"
             />
     </RelativeLayout>
 
