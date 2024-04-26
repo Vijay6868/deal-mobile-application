@@ -18,15 +18,17 @@
             android:exported="false" />
         <activity
             android:name=".Login"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".C_login_or_register_2"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+
             android:exported="false" />
         <activity
             android:name=".C_Registration"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

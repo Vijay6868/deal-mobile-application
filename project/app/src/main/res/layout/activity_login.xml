@@ -6,10 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/white">
-    <ImageButton
-        android:id="@+id/al_back"
-        style="@style/backButton"
-        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
