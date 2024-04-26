@@ -4,6 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
+    android:background="@color/white"
 tools:context=".C_Registration">
 
 <RelativeLayout
@@ -11,10 +12,6 @@ tools:context=".C_Registration">
     android:layout_height="wrap_content"
     android:background="@color/white">
 
-    <ImageButton
-        android:id="@+id/ac_back"
-        style="@style/backButton"
-        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,23 +19,27 @@ tools:context=".C_Registration">
         style="@style/label_heading"
         android:id="@+id/lbHeading_login"
         android:padding="40sp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="10dp"/>
+
+
 
     <EditText
         android:id="@+id/tbfirstname_login_r"
         style="@style/et_Text"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_below="@+id/lbHeading_login"
-        android:layout_centerInParent="true"
 
+        android:layout_centerInParent="true"
         android:background="@drawable/edit_text_background"
         android:hint="Frist Name"
         android:textColorHint="@color/et_hint" />
 
+
+
     <EditText
         android:id="@+id/tblastname_login_r"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
         android:hint="Last Name"
         android:textColorHint="@color/et_hint"
@@ -48,9 +49,10 @@ tools:context=".C_Registration">
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"/>
 
+
     <EditText
         android:id="@+id/tbUsername_login_r"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
         android:hint="Username"
         android:textColorHint="@color/et_hint"
@@ -60,10 +62,12 @@ tools:context=".C_Registration">
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"/>
 
+
+
     <EditText
         android:id="@+id/tbPassword_login_r"
         style="@style/et_Text"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_below="@+id/tbUsername_login_r"
         android:layout_centerInParent="true"
@@ -72,23 +76,24 @@ tools:context=".C_Registration">
         android:hint="Password"
         android:inputType="textPassword"
         android:textColorHint="@color/et_hint" />
+
     <EditText
         android:id="@+id/tbConfirmPassword_login_r"
         style="@style/et_Text"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_below="@+id/tbPassword_login_r"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_background"
-        android:hint="Password"
+        android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textColorHint="@color/et_hint" />
 
     <EditText
         android:id="@+id/tbEmail_r"
         style="@style/et_Text"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_below="@+id/tbConfirmPassword_login_r"
         android:layout_centerInParent="true"
@@ -100,32 +105,77 @@ tools:context=".C_Registration">
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/et_hint" />
+
     <EditText
         android:id="@+id/tbBuisness_name"
         style="@style/et_Text"
-        android:layout_width="350dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_below="@+id/tbEmail_r"
         android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
 
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/edit_text_background"
         android:hint="Buisness name"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/et_hint" />
+        android:textColorHint="@color/et_hint"
+        android:visibility="invisible"/>
+
     <Button
         android:id="@+id/btLogin"
         android:layout_width="300sp"
         android:layout_height="50sp"
         android:layout_below="@id/tbBuisness_name"
         android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="30dp"
         android:layout_margin="20dp"
         android:background="@drawable/bt_sec_color"
         android:text="Register"
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/wlb_fname"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_below="@+id/lbHeading_login"/>
+
+    <TextView
+        android:id="@+id/wlb_lname"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_marginTop="250dp"/>
+
+    <TextView
+        android:id="@+id/wlb_password"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_marginTop="390dp"/>
+    <TextView
+        android:id="@+id/wlb_uname"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_marginTop="320dp"/>
+
+    <TextView
+        android:id="@+id/wlb_cpassword"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_marginTop="460dp"/>
+
+    <TextView
+        android:id="@+id/wlb_email"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_marginTop="530dp"/>
+    <TextView
+        android:id="@+id/wlb_bname"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_marginTop="600dp"/>
 
 </RelativeLayout>
 </ScrollView>

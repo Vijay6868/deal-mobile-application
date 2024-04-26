@@ -10,4 +10,5 @@
     <color name="appOrange">#E34918</color>
     <color name="iconPress">#676767</color>
     <color name="star">#D7A31C</color>
+    <color name="red">#FF0000</color>
 </resources>

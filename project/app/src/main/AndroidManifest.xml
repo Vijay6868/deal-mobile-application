@@ -22,10 +22,12 @@
             android:exported="false" />
         <activity
             android:name=".C_login_or_register_2"
+            android:parentActivityName=".MainActivity"
 
             android:exported="false" />
         <activity
             android:name=".C_Registration"
+            android:parentActivityName=".C_login_or_register_2"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
