@@ -35,7 +35,7 @@ public class C_login_or_register_2 extends AppCompatActivity {
             public void onClick(View v) {
                 // Launch the Login activity and pass user type as an extra
                 Intent intent = new Intent(C_login_or_register_2.this, C_Registration.class);
-                intent.putExtra("userType", "customer");
+                intent.putExtra("userType", "standard");
                 startActivity(intent);
             }
         });

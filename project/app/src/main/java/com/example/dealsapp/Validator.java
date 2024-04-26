@@ -3,7 +3,7 @@ package com.example.dealsapp;
 public class Validator {
     // Constants for minimum length requirements
     private static final int MIN_USERNAME_LENGTH = 5;
-    private static final int MIN_PASSWORD_LENGTH = 8;
+    private static final int MIN_PASSWORD_LENGTH = 6;
     private static final int MIN_NAME_LENGTH = 2; // Minimum length for first name and last name
     private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
 
@@ -35,7 +35,12 @@ public class Validator {
     public static boolean isValidBusinessName(String businessName) {
         // Implement your validation logic for business name here
         // For example, if the business name cannot be empty:
-        return isValidString(businessName, 1); // Minimum length of 1 for business name
+        return isValidString(businessName, 3); // Minimum length of 3 for business name
+    }
+    public static boolean isValidJobCode(String jobCode) {
+        // Implement your validation logic for business name here
+        // For example, if the business name cannot be empty:
+        return isValidString(jobCode, 4); // Minimum length of 4 for job code
     }
 
     // Generic method to validate any string attribute based on minimum length
