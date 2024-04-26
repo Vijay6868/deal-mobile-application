@@ -11,6 +11,16 @@
         <item name="android:textColor">@color/lb_text_color</item>
         <item name="android:textStyle">bold</item>
     </style>
+    <style name="label_color2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/lb_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="label_color3">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/sec_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="label_heading">
         <item name="android:textSize">34sp</item>
         <item name="android:textColor">@color/black</item>

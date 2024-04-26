@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 
 public class F_Featured_Deals extends Fragment implements SelectListener {
-
+    ArrayList<Deal> deals;
     RecyclerView recyclerView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -22,7 +22,7 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
 
         View view = inflater.inflate(R.layout.fragment_f__featured__deals, container, false);
 
-        ArrayList<Deal> deals;
+
         deals = getDeals();
         recyclerView = view.findViewById(R.id.f_rv_item);
         RVAdapter adapter = new RVAdapter(deals,this);
@@ -102,5 +102,22 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         RVAdapter adapter = new RVAdapter(filteredDeals, this);
         recyclerView.setAdapter(adapter);
     }
+    public void filterByCategory(int categoryResource) {
+        ArrayList<Deal> filteredDeals = new ArrayList<>();
+
+        // Get the category string from resources
+        String category = getResources().getString(categoryResource);
+
+        for (Deal deal : deals) {
+            if (deal.getCategory()== categoryResource) {
+                filteredDeals.add(deal);
+            }
+        }
+
+        // Update the RecyclerView adapter with the filtered list of deals
+        RVAdapter adapter = new RVAdapter(filteredDeals, this);
+        recyclerView.setAdapter(adapter);
+    }
+
 
 }

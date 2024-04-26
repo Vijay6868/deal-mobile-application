@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".C_Registration"
-    android:background="@color/white">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".C_Registration">
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
     <ImageButton
         android:id="@+id/ac_back"
@@ -97,16 +100,32 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/et_hint" />
+    <EditText
+        android:id="@+id/tbBuisness_name"
+        style="@style/et_Text"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tbEmail_r"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
 
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Buisness name"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/et_hint" />
     <Button
         android:id="@+id/btLogin"
         android:layout_width="300sp"
         android:layout_height="50sp"
-        android:layout_below="@id/tbEmail_r"
+        android:layout_below="@id/tbBuisness_name"
         android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
         android:background="@drawable/bt_sec_color"
         android:text="Register"
         android:textSize="18sp" />
 
+
 </RelativeLayout>
+</ScrollView>

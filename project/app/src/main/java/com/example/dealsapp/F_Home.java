@@ -91,5 +91,15 @@ public class F_Home extends Fragment implements Category_frag.CategoryFilterList
     @Override
     public void onFilterButtonClicked(String filterType) {
 
+        // Apply filter to the RecyclerView in F_Featured_Deals based on the button clicked
+        if (filterType.equals("To do things")) {
+            // Apply filter for todo things
+            // Call method in F_Featured_Deals to filter RecyclerView
+            ((F_Featured_Deals) getChildFragmentManager().findFragmentById(R.id.frame_layout)).filterByCategory(R.string.c_to_do_things);
+        } else if (filterType.equals("Restaurants")) {
+            // Apply filter for restaurants
+            // Call method in F_Featured_Deals to filter RecyclerView
+            ((F_Featured_Deals) getChildFragmentManager().findFragmentById(R.id.frame_layout)).filterByCategory(R.string.c_restaurant);
+        }
     }
 }

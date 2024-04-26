@@ -21,10 +21,22 @@ public class Category_frag extends Fragment {
         toDo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // Notify the parent fragment/activity about the button click event
+                if (getActivity() instanceof CategoryFilterListener) {
+                    ((CategoryFilterListener) getActivity()).onFilterButtonClicked("To do things");
+                }
             }
         });
         restaurants = view.findViewById(R.id.btRestaurants);
+        restaurants.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Notify the parent fragment/activity about the button click event
+                if (getActivity() instanceof CategoryFilterListener) {
+                    ((CategoryFilterListener) getActivity()).onFilterButtonClicked("Restaurant");
+                }
+            }
+        });
 
         // Inflate the layout for this fragment
         return view;

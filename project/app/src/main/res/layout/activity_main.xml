@@ -63,5 +63,25 @@
         android:text="Admin"
         android:textColor="@color/white"
         android:textSize="18sp" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/label_color2"
+        android:id="@+id/tv_already_have_account"
+        android:text="Don't hava an account?"
+        android:layout_below="@id/btAdmin"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="100dp"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        style="@style/label_color3"
+        android:id="@+id/tv_already_have_account_click_here"
+        android:text="Click here"
+        android:layout_below="@id/btAdmin"
+        android:layout_alignRight="@id/btAdmin"
+        android:layout_marginTop="100dp"
+        />
 
 </RelativeLayout>
