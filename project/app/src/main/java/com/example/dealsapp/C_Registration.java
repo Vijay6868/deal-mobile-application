@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class C_Registration extends AppCompatActivity {
     EditText fname, lname, uname, password, cpassword, email, bname,jobcode;
@@ -67,6 +68,9 @@ public class C_Registration extends AppCompatActivity {
 
                 boolean check = validateInputs();
                 if(check){
+                    UserManager newuser = new UserManager();
+                    newuser.addUser(user);
+                    Toast.makeText(C_Registration.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(C_Registration.this, Login.class);
                     startActivity(intent);
                 }
@@ -83,7 +87,7 @@ public class C_Registration extends AppCompatActivity {
         _lname = lname.getText().toString();
 
         uname = findViewById(R.id.tbUsername_login_r);
-        _uname = fname.getText().toString();
+        _uname = uname.getText().toString();
 
         password = findViewById(R.id.tbPassword_login_r);
         _password = password.getText().toString();
@@ -145,6 +149,13 @@ public class C_Registration extends AppCompatActivity {
             isValid = false;
         } else {
             wpassword.setVisibility(View.GONE);
+        }
+        // Validate confirm password.
+        if(!validator.isValidMatch(_password,_cpassword)){
+            wcpassword.setVisibility(View.VISIBLE);
+            isValid = false;
+        } else{
+            wcpassword.setVisibility(View.GONE);
         }
 
         // Validate email

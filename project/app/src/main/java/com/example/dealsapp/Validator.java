@@ -18,14 +18,15 @@ public class Validator {
     }
 
     public static boolean isValidFirstName(String firstName) {
-        // Implement your validation logic for first name here
-        return isValidString(firstName, MIN_NAME_LENGTH);
+        // Validation logic for first name: contains only letters and has minimum length MIN_NAME_LENGTH
+        return isValidString(firstName, MIN_NAME_LENGTH) && firstName.matches("[a-zA-Z]+");
     }
 
     public static boolean isValidLastName(String lastName) {
-        // Implement your validation logic for last name here
-        return isValidString(lastName, MIN_NAME_LENGTH);
+        // Validation logic for last name: contains only letters and has minimum length MIN_NAME_LENGTH
+        return isValidString(lastName, MIN_NAME_LENGTH) && lastName.matches("[a-zA-Z]+");
     }
+
 
     public static boolean isValidEmail(String email) {
         // Implement your validation logic for email here
@@ -41,6 +42,10 @@ public class Validator {
         // Implement your validation logic for business name here
         // For example, if the business name cannot be empty:
         return isValidString(jobCode, 4); // Minimum length of 4 for job code
+    }
+    //check password value matches with confirm password value
+    public static boolean isValidMatch(String password, String c_password){
+        return password.equals(c_password);
     }
 
     // Generic method to validate any string attribute based on minimum length
