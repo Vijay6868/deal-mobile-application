@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class UserManager {
     private static UserManager instance;
     private ArrayList<User> users;
+    private User currentUser;
 
     private UserManager() {
         this.users = new ArrayList<>();
@@ -34,10 +35,14 @@ public class UserManager {
         for (User user : users) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)
                 && user.getUserType().equals(userType)) {
+                currentUser = user;
                 return true; // Username and password and userType match
             }
         }
         return false; // Username or password userType is incorrect
+    }
+    public User getCurrentUser(){
+        return currentUser;
     }
 
 }
