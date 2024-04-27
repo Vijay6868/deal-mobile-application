@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,10 +23,10 @@ public class User_details extends Fragment {
     UserManager userManager;
 
     String _usertype, _fname, _lname, _uname, _email, _bname, _jobcode;
-    TextView usertype, name, lname, uname, email, bname, jobcode;
+    TextView usertype, name, lname, uname, email, bname, jobcode, cperson;
     View view;
     ImageView ic_usertype;
-    Layout RlContactPerson;
+    RelativeLayout RlContactPerson;
     Activity context;
     public User_details() {
         // Required empty public constructor
@@ -46,15 +47,28 @@ public class User_details extends Fragment {
         name = view.findViewById(R.id.lb_full_name);
         email = view.findViewById(R.id.lb_email);
         ic_usertype = view.findViewById(R.id.ic_user_type);
+        RlContactPerson = view.findViewById(R.id.rl_contact_person);
 
         _usertype = user.getUserType();
         _email = user.getEmail();
         _fname = user.getFname();
         _lname = user.getLname();
 
-        usertype.setText(_usertype);
-        email.setText(_email);
+
         String full_name = _fname+" "+_lname;
+
+        usertype.setText(_usertype);
+
+        if(_usertype.equals("supplier")){
+            _bname = ((Supplier) user).getBname();
+            full_name = _bname;
+            RlContactPerson.setVisibility(View.VISIBLE);
+            cperson = view.findViewById(R.id.lb_contact_person);
+            String c_name = _fname+" "+_lname;
+            cperson.setText(c_name);
+        }
+        email.setText(_email);
+
         name.setText(full_name);
 
         return view;
