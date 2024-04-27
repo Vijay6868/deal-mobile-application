@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Launch the Login activity and pass user type as an extra
                 Intent intent = new Intent(MainActivity.this, Login.class);
-                intent.putExtra("userType", "customer");
+                intent.putExtra("userType", "standard");
                 startActivity(intent);
             }
         });

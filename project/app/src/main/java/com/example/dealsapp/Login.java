@@ -14,12 +14,16 @@ public class Login extends AppCompatActivity {
 
     EditText username, password;
     Button btlogin;
-    String _username, _password;
+    String _username, _password,_userType;
     TextView wusername, wpassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("userType")) {
+            _userType = intent.getStringExtra("userType");}
 
         //loginInput();
         //loginAlert();
@@ -59,7 +63,7 @@ public class Login extends AppCompatActivity {
 
         UserManager userManager = UserManager.getInstance();
 
-        if (!userManager.isValidLogin(_username, _password)) {
+        if (!userManager.isValidLogin(_username, _password, _userType)) {
             isValid = false;
         }
 

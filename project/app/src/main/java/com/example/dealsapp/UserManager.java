@@ -30,13 +30,14 @@ public class UserManager {
         return true; // Username is available
     }
 
-    public boolean isValidLogin(String username, String password) {
+    public boolean isValidLogin(String username, String password, String userType) {
         for (User user : users) {
-            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                return true; // Username and password match
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)
+                && user.getUserType().equals(userType)) {
+                return true; // Username and password and userType match
             }
         }
-        return false; // Username or password is incorrect
+        return false; // Username or password userType is incorrect
     }
 
 }

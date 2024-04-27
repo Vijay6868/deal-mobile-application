@@ -16,6 +16,7 @@ public class C_Registration extends AppCompatActivity {
     String _fname, _lname, _uname, _password, _cpassword, _email, _bname, _jobcode;
     String userType;
     User user;
+    UserManager userManager;
 
     Button btregister;
     @Override
@@ -23,7 +24,7 @@ public class C_Registration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cregistration);
 
-
+        userManager = UserManager.getInstance();
 
         // Initialize EditText and TextView fields
         regInput();
@@ -68,19 +69,17 @@ public class C_Registration extends AppCompatActivity {
 
                 boolean check = validateInputs();
                 if(check){
-                    UserManager userManager = UserManager.getInstance();
+
                     user = newUser();
                     userManager.addUser(user);
                     Toast.makeText(C_Registration.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(C_Registration.this, Login.class);
+                    Intent intent = new Intent(C_Registration.this, MainActivity.class);
                     startActivity(intent);
                 }
             }
         });
 
-
 }
-
 
     public void regInput(){
 
@@ -141,6 +140,14 @@ public class C_Registration extends AppCompatActivity {
 
         // Validate username
         if (!validator.isValidUsername(_uname)) {
+            wuname.setVisibility(View.VISIBLE);
+            Toast.makeText(this, "Username already taken", Toast.LENGTH_SHORT).show();
+            isValid = false;
+        } else {
+            wuname.setVisibility(View.GONE);
+        }
+        //validate username available
+        if (!userManager.isUsernameAvailable(_uname)) {
             wuname.setVisibility(View.VISIBLE);
             isValid = false;
         } else {
