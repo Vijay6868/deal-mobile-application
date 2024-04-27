@@ -49,7 +49,7 @@ public class C_Registration extends AppCompatActivity {
             }
 
             // Create a User instance based on the userType using the factory method
-            user = UserFactory.createUser(userType, _fname, _lname, _uname, _password, _email, _bname, _jobcode);
+            //user = UserFactory.createUser(userType, _fname, _lname, _uname, _password, _email, _bname, _jobcode);
         } else {
             // Handle the case where userType extra is not provided
             // You may want to show an error message or return to the previous activity.
@@ -68,15 +68,19 @@ public class C_Registration extends AppCompatActivity {
 
                 boolean check = validateInputs();
                 if(check){
-                    UserManager newuser = new UserManager();
-                    newuser.addUser(user);
+                    UserManager userManager = UserManager.getInstance();
+                    user = newUser();
+                    userManager.addUser(user);
                     Toast.makeText(C_Registration.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(C_Registration.this, Login.class);
                     startActivity(intent);
                 }
             }
         });
-    }
+
+
+}
+
 
     public void regInput(){
 
@@ -187,6 +191,10 @@ public class C_Registration extends AppCompatActivity {
 
 
         return isValid;
+    }
+    public User newUser(){
+        user = UserFactory.createUser(userType, _fname, _lname, _uname, _password, _email, _bname, _jobcode);
+        return user;
     }
 
 

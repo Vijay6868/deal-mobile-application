@@ -3,10 +3,18 @@ package com.example.dealsapp;
 import java.util.ArrayList;
 
 public class UserManager {
+    private static UserManager instance;
     private ArrayList<User> users;
 
-    public UserManager() {
+    private UserManager() {
         this.users = new ArrayList<>();
+    }
+
+    public static synchronized UserManager getInstance() {
+        if (instance == null) {
+            instance = new UserManager();
+        }
+        return instance;
     }
 
     public void addUser(User user) {
@@ -30,4 +38,5 @@ public class UserManager {
         }
         return false; // Username or password is incorrect
     }
+
 }

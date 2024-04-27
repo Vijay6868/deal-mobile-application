@@ -22,7 +22,6 @@ tools:context=".C_Registration">
         android:layout_marginTop="10dp"/>
 
 
-
     <EditText
         android:id="@+id/tbfirstname_login_r"
         style="@style/et_Text"
@@ -52,16 +51,15 @@ tools:context=".C_Registration">
 
     <EditText
         android:id="@+id/tbUsername_login_r"
+        style="@style/et_Text"
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:hint="Username"
-        android:textColorHint="@color/et_hint"
-        style="@style/et_Text"
-        android:background="@drawable/edit_text_background"
         android:layout_below="@+id/tblastname_login_r"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"/>
-
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Username"
+        android:textColorHint="@color/et_hint" />
 
 
     <EditText

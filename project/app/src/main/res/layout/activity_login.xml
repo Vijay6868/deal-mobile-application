@@ -20,7 +20,7 @@
     <EditText
         android:id="@+id/tbUsername_login"
         style="@style/et_Text"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_below="@+id/lbHeading_login"
         android:layout_centerInParent="true"
@@ -32,7 +32,7 @@
     <EditText
         android:id="@+id/tbPassword_login"
         style="@style/et_Text"
-        android:layout_width="350dp"
+        android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_below="@+id/tbUsername_login"
         android:layout_centerInParent="true"
@@ -51,6 +51,17 @@
         android:layout_marginTop="50dp"
         android:layout_alignRight="@id/tbPassword_login"
         android:layout_below="@id/tbPassword_login"/>
+    <TextView
+        android:id="@+id/wlb_uname"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbUsername_login"
+        android:layout_marginTop="280dp"/>
+
+    <TextView
+        android:id="@+id/wlb_password"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbUsername_login"
+        android:layout_marginTop="350dp"/>
 
     <Button
         android:id="@+id/btLogin"

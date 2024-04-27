@@ -2,8 +2,8 @@ package com.example.dealsapp;
 
 public class Supplier extends User{
     String bname;
-    public Supplier(String username, String password, String fname, String lname, String email, String bname) {
-        super(username, password, fname, lname, email);
+    public Supplier(String fname,String lname,String username, String password, String email, String bname) {
+        super(fname, lname,username, password, email);
         this.bname = bname;
     }
 

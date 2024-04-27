@@ -2,8 +2,8 @@ package com.example.dealsapp;
 
 public class Validator {
     // Constants for minimum length requirements
-    private static final int MIN_USERNAME_LENGTH = 5;
-    private static final int MIN_PASSWORD_LENGTH = 6;
+    private static final int MIN_USERNAME_LENGTH = 4;
+    private static final int MIN_PASSWORD_LENGTH = 4;
     private static final int MIN_NAME_LENGTH = 2; // Minimum length for first name and last name
     private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
 
