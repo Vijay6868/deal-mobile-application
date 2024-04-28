@@ -6,4 +6,8 @@ public class Admin extends User{
         super(userType,fname, lname,username, password, email);
         this.jobcode = jobCode;
     }
+
+    public String getJobcode() {
+        return jobcode;
+    }
 }

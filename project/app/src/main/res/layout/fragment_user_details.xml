@@ -95,6 +95,7 @@
                 android:src="@drawable/ic_my_bookings"
                 android:layout_below="@id/ic_password"/>
             <TextView
+                android:id="@+id/lb_mybookings"
                 style="@style/user_details"
                 android:text="My Bookings"
                 android:layout_toRightOf="@id/ic_bookings"
@@ -102,12 +103,12 @@
             <ImageView
                 android:id="@+id/ic_address"
                 style="@style/user_details_icon"
-                android:src="@drawable/ic_address"
+                android:src="@drawable/iconamoon__profile_light"
                 android:layout_below="@id/ic_bookings"/>
             <TextView
                 android:id="@+id/lb_address"
                 style="@style/user_details"
-                android:text="Address"
+                android:text="Username"
                 android:layout_toRightOf="@id/ic_address"
                 android:layout_below="@id/ic_bookings"
                 android:layout_marginTop="13dp"/>

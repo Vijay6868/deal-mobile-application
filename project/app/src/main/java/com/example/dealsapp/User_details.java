@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.text.Layout;
@@ -25,9 +26,10 @@ public class User_details extends Fragment {
     String _usertype, _fname, _lname, _uname, _email, _bname, _jobcode;
     TextView usertype, name, lname, uname, email, bname, jobcode, cperson;
     View view;
-    ImageView ic_usertype;
+    ImageView ic_usertype, ic_jobcode;
     RelativeLayout RlContactPerson;
     Activity context;
+
     public User_details() {
         // Required empty public constructor
     }
@@ -47,12 +49,16 @@ public class User_details extends Fragment {
         name = view.findViewById(R.id.lb_full_name);
         email = view.findViewById(R.id.lb_email);
         ic_usertype = view.findViewById(R.id.ic_user_type);
+        uname = view.findViewById(R.id.lb_address);
+        jobcode = view.findViewById(R.id.lb_mybookings);
+
         RlContactPerson = view.findViewById(R.id.rl_contact_person);
 
         _usertype = user.getUserType();
         _email = user.getEmail();
         _fname = user.getFname();
         _lname = user.getLname();
+        _uname = user.getUsername();
 
 
         String full_name = _fname+" "+_lname;
@@ -66,10 +72,18 @@ public class User_details extends Fragment {
             cperson = view.findViewById(R.id.lb_contact_person);
             String c_name = _fname+" "+_lname;
             cperson.setText(c_name);
+            ic_usertype.setImageResource(R.drawable.mdi__partnership_outline_2);
+        } else if (_usertype.equals("admin")) {
+            ic_usertype.setImageResource(R.drawable.eos_icons__admin_outlined);
+            ic_jobcode = view.findViewById(R.id.ic_bookings);
+            ic_jobcode.setImageResource(R.drawable.ic__baseline_perm_contact_calendar);
+            _jobcode = ((Admin) user).getJobcode();
+            jobcode.setText(_jobcode);
+
         }
         email.setText(_email);
-
         name.setText(full_name);
+        uname.setText(_uname);
 
         return view;
     }

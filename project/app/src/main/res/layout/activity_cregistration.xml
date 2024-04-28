@@ -175,6 +175,11 @@ tools:context=".C_Registration">
         style="@style/red_warn"
         android:layout_toEndOf="@+id/tbfirstname_login_r"
         android:layout_marginTop="320dp"/>
+    <TextView
+        android:id="@+id/wlb_uname2"
+        style="@style/red_warn"
+        android:layout_toEndOf="@+id/tbfirstname_login_r"
+        android:layout_marginTop="320dp"/>
 
     <TextView
         android:id="@+id/wlb_cpassword"

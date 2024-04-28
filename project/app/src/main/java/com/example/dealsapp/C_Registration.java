@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class C_Registration extends AppCompatActivity {
     EditText fname, lname, uname, password, cpassword, email, bname,jobcode;
-    TextView wfname, wlname, wuname, wpassword, wcpassword, wemail, wbname, wjobcode;
+    TextView wfname, wlname, wuname,wuname2, wpassword, wcpassword, wemail, wbname, wjobcode;
     String _fname, _lname, _uname, _password, _cpassword, _email, _bname, _jobcode;
     String userType;
     User user;
@@ -111,6 +111,7 @@ public class C_Registration extends AppCompatActivity {
         wfname = findViewById(R.id.wlb_fname);
         wlname = findViewById(R.id.wlb_lname);
         wuname = findViewById(R.id.wlb_uname);
+        wuname2 = findViewById(R.id.wlb_uname2);
         wpassword = findViewById(R.id.wlb_password);
         wcpassword = findViewById(R.id.wlb_cpassword);
         wemail = findViewById(R.id.wlb_email);
@@ -143,7 +144,7 @@ public class C_Registration extends AppCompatActivity {
             Toast.makeText(this, "Username already taken", Toast.LENGTH_SHORT).show();
             isValid = false;
         } else {
-            wuname.setVisibility(View.GONE);
+            wuname2.setVisibility(View.GONE);
         }
 
         // Validate username
