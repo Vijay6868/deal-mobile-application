@@ -137,22 +137,25 @@ public class C_Registration extends AppCompatActivity {
         } else {
             wlname.setVisibility(View.GONE);
         }
-
-        // Validate username
-        if (!validator.isValidUsername(_uname)) {
+        //validate username available
+        if (!userManager.isUsernameAvailable(_uname)) {
             wuname.setVisibility(View.VISIBLE);
             Toast.makeText(this, "Username already taken", Toast.LENGTH_SHORT).show();
             isValid = false;
         } else {
             wuname.setVisibility(View.GONE);
         }
-        //validate username available
-        if (!userManager.isUsernameAvailable(_uname)) {
+
+        // Validate username
+
+        if (!validator.isValidUsername(_uname)) {
             wuname.setVisibility(View.VISIBLE);
+
             isValid = false;
         } else {
             wuname.setVisibility(View.GONE);
         }
+
 
         // Validate password
         if (!validator.isValidPassword(_password)) {

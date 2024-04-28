@@ -13,7 +13,7 @@ public class Validator {
     }
 
     public static boolean isValidPassword(String password) {
-        // Implement your validation logic for passwords here
+
         return isValidString(password, MIN_PASSWORD_LENGTH);
     }
 
@@ -29,18 +29,15 @@ public class Validator {
 
 
     public static boolean isValidEmail(String email) {
-        // Implement your validation logic for email here
+
         return email != null && email.matches(EMAIL_REGEX);
     }
 
     public static boolean isValidBusinessName(String businessName) {
-        // Implement your validation logic for business name here
-        // For example, if the business name cannot be empty:
         return isValidString(businessName, 3); // Minimum length of 3 for business name
     }
     public static boolean isValidJobCode(String jobCode) {
-        // Implement your validation logic for business name here
-        // For example, if the business name cannot be empty:
+
         return isValidString(jobCode, 4); // Minimum length of 4 for job code
     }
     //check password value matches with confirm password value
