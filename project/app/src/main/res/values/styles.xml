@@ -6,6 +6,14 @@
         <item name="textFillColor">@color/sec_color</item>
         <item name="strokeColor">@color/sec_color</item>
     </style>
+    <style name="categoryButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:backgroundTint">#FFFFFFFF</item>
+        <item name="textFillColor">@color/sec_color</item>
+        <item name="strokeColor">@color/sec_color</item>
+    </style>
     <style name="label_color">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/lb_text_color</item>
@@ -57,6 +65,18 @@
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:background">@drawable/dark_blue_button</item>
+    </style>
+    <style name="liteBlueButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textColor">@color/sec_color</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:background">@drawable/section_outline</item>
+        <item name="android:textSize">14sp</item>
     </style>
     <style name="user_details_icon">
         <item name="android:layout_width">30dp</item>

@@ -14,7 +14,11 @@ import java.util.ArrayList;
 
 
 public class F_Featured_Deals extends Fragment implements SelectListener {
-    ArrayList<Deal> deals;
+    public ArrayList<Deal> getDeals() {
+        return deals;
+    }
+
+    private ArrayList<Deal> deals;
     RecyclerView recyclerView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,7 +27,7 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         View view = inflater.inflate(R.layout.fragment_f__featured__deals, container, false);
 
 
-        deals = getDeals();
+        deals = inputDeals();
         recyclerView = view.findViewById(R.id.f_rv_item);
         RVAdapter adapter = new RVAdapter(deals,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -47,7 +51,7 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
                 .commit();
 
     }
-    public ArrayList<Deal> getDeals(){
+    public ArrayList<Deal> inputDeals(){
         ArrayList<Deal> deals = new ArrayList<>();
 
         ArrayList<Integer> list = new ArrayList<>(); // to store image res id for s listing
@@ -91,7 +95,7 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
     void performSearch(String query) {
         // Filter the list of deals based on the entered query
         ArrayList<Deal> filteredDeals = new ArrayList<>();
-        for (Deal deal : getDeals()) {
+        for (Deal deal : inputDeals()) {
             // Check if the deal's title contains the query (you can adjust the search criteria as needed)
             if (deal.getTitle().toLowerCase().contains(query.toLowerCase())) {
                 filteredDeals.add(deal);
@@ -118,6 +122,7 @@ public class F_Featured_Deals extends Fragment implements SelectListener {
         RVAdapter adapter = new RVAdapter(filteredDeals, this);
         recyclerView.setAdapter(adapter);
     }
+
 
 
 }

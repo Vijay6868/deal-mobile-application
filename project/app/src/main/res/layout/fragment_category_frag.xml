@@ -10,19 +10,45 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonLayout"
+            android:paddingLeft="30dp">
+            <ToggleButton
+                style="@style/liteBlueButton"
+                android:text="things to do"
+                android:id="@+id/btThingsToDo"
+                android:textOff="Things to do"
+                android:textOn="Things to do"
+                />
+            <ToggleButton
+                style="@style/liteBlueButton"
+                android:text="Restaurants"
+                android:id="@+id/btRestaurants"
+                android:textOff="Restaurants"
+                android:textOn="Restaurants"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/deals_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/buttonLayout"
+            android:layout_marginTop="10dp">
 
-        <Button
-            style="@style/darkBlueButton"
-            android:text="things to do"
-            android:id="@+id/btThingsToDo"
-            />
-        <Button
-            style="@style/darkBlueButton"
-            android:layout_marginTop="200dp"
-            android:text="Restaurants"
-            android:id="@+id/btRestaurants"
-            />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/c_rv_item"
+                android:background="@color/white"/>
+        </FrameLayout>
+
+
     </RelativeLayout>
 
 </FrameLayout>
