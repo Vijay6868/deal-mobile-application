@@ -1,3 +1,7 @@
-# deal-mobile-application
-# User can browse different deals in the app, Featured Deals app displayed on Home page.
-# User able to filter the deals
+# Deals Android Mobile Application.
+- Built Front-End of the App, inspired from Website Bookme, implemented RBAC i.e Standard User, Vendor and Admin.
+# Features
+- Personalised User account.
+- User can browse different deals in the app.
+- User able to filter the deals.
+- Check their details on Profile page
